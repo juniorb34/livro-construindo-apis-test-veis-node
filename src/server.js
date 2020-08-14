@@ -1,12 +1,6 @@
-const express = require('express');
-const app = express();
+import app from './app';
+const port = 3000;
 
-app.set('view engine', 'ejs');
-
-app.get('/', (req, res) => {
-  res.render('index');
-});
-
-app.listen(8888, () => {
-  console.log('App rodando!');
+app.listen(port, () => {
+  console.log(`app running on port ${port}`);
 });
